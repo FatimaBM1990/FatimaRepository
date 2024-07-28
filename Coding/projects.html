@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Fatima's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+    <style>
+        .project-item {
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Fatima's Portfolio</h1>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="projects" class="section-bg fade-in">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-item" onclick="window.location.href='Little Sprout/homepage.html'">
+                    <img src="../Little Sprout/homepage.html" alt="Little Sprout">
+                    <h3>Little Sprout</h3>
+                    <p>Online baby store focused around necessities for little kids.</p>
+                </div>
+                <div class="project-item" onclick="window.location.href='Baby Life/index.html'">
+                    <img src="Baby Life/baby-life.png" alt="Baby Life">
+                    <h3>Baby Life</h3>
+                    <p>A game mainly based on JS, which I coded in parallel to life summarized.</p>
+                </div>
+                <div class="project-item" onclick="window.location.href='Bootcamp Form/indices.html'">
+                    <img src="Bootcamp Form/bootcamp-form.png" alt="Bootcamp Form">
+                    <h3>Bootcamp Form</h3>
+                    <p>Form I created during my time at JUSTIT Bootcamp as one of the tasks, and prioritizes HTML.</p>
+                </div>
+                <div class="project-item" onclick="window.location.href='index.html'">
+                    <img src="Portfolio Fatima/PythonQuiz.png" alt="Python Languages Quiz">
+                    <h3>Python Languages Quiz</h3>
+                    <p>Python based quiz focused on JS, HTML, CSS and Python and has 3 sets of difficulties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('.project-item').forEach(item => {
+            item.addEventListener('click', () => {
+                window.location.href = item.getAttribute('data-url');
+            });
+        });
+    </script>
+</body>
+</html>

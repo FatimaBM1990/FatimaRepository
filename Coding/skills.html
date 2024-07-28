@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Fatima's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Fatima's Portfolio</h1>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="skills" class="section-bg fade-in">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item fade-in">
+                    <h3>HTML</h3>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <p class="skill-desc">HTML is the standard language for creating web pages and web applications.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <h3>CSS</h3>
+                    <pre><code>body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #333;
+}</code></pre>
+                    <p class="skill-desc">CSS is used to style and layout web pages, including the design, colors, and fonts.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <h3>JavaScript</h3>
+                    <pre><code>function greet(name) {
+    return 'Hello, ' + name;
+}
+console.log(greet('World'));</code></pre>
+                    <p class="skill-desc">JavaScript is a programming language that enables interactive web pages and applications.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <h3>Python</h3>
+                    <pre><code>def greet(name):
+    return f'Hello, {name}'
+print(greet('World'))</code></pre>
+                    <p class="skill-desc">Python is a versatile language used for web development, data analysis, and scripting.</p>
+                </div>
+            </div>
+            <button id="color-toggle">Toggle Dark Mode</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

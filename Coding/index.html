@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fatima's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-size: 18px;
+            background-color: #f8d7da;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .section-bg {
+            background-color: #f8d7da;
+            padding: 60px 20px;
+            text-align: center;
+            color: #333;
+            border: 2px solid #2c3e50;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .glow {
+            font-size: 2.5rem;
+            color: #333;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            transition: text-shadow 0.3s ease;
+        }
+
+        .description {
+            font-size: 1.2rem;
+        }
+
+        #intro img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #2c3e50;
+        }
+
+        #contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #contact ul li {
+            margin: 10px 0;
+        }
+
+        #contact ul li a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        #contact ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Fatima's Portfolio</h1>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="intro" class="section-bg fade-in">
+        <div class="container">
+            <img src="Fatima.jpeg" alt="Fatima">
+            <h2 class="glow">Hi, I'm Fatima</h2>
+            <p class="description">Aspiring Software Developer with a passion for creating innovative solutions and learning new technologies.</p>
+        </div>
+    </section>
+    <section id="about" class="section-bg fade-in">
+        <div class="container">
+            <h2 class="glow">About Me</h2>
+            <p class="description">Bengali coder born and raised in East London, I discovered my passion at a young age!</p>
+        </div>
+    </section>
+    <section id="skills" class="section-bg fade-in">
+        <div class="container">
+            <h2 class="glow">Skills</h2>
+            <p class="description">My skills is my ability to combine functionality with UI, using CSS Animations and Javascript to create difficult to m/p>
+        </div>
+    </section>
+    <section id="projects" class="section-bg fade-in">
+        <div class="container">
+            <h2 class="glow">Projects</h2>
+            <p class="description">My projects involve a variety of different languages to create different programs, etc games, sites, tools.</p>
+        </div>
+    </section>
+    <section id="tools" class="section-bg fade-in">
+        <div class="container">
+            <h2 class="glow">Tools</h2>
+            <p class="description">I often use VSCODE to code projects, and github for other things.</p>
+        </div>
+    </section>
+    <section id="resume" class="section-bg fade-in">
+        <div class="container">
+            <h2 class="glow">Resume</h2>
+            <p class="description"><a href="resume.html">My resume can be found here:</a></p>
+        </div>
+    </section>
+    <section id="contact" class="section-bg fade-in">
+        <div class="container">
+            <h2 class="glow">Contact Me</h2>
+            <p class="description">Feel free to reach out to me through any of the platforms below:</p>
+            <ul>
+                <li>Email: <a href="mailto:fatima@example.com">fatima@example.com</a></li>
+                <li>GitHub: <a href="https://github.com/fatima">github.com/fatima</a></li>
+                <!-- Add other contact information as needed -->
+            </ul>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
