@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart - Little Sprout</title>
+    <style>
+        .cart-container {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .cart-header {
+            font-size: 2rem;
+            color: #00796b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item img {
+            width: 80px;
+            height: auto;
+        }
+        .cart-item-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .cart-item-name {
+            font-size: 1.1rem;
+            color: #00796b;
+        }
+        .cart-item-price {
+            font-size: 1rem;
+            color: #555555;
+        }
+        .cart-total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+        }
+        .checkout-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .checkout-button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+<header class="main-header">
+    <h1 class="main-text">Shopping Cart</h1>
+</header>
+<nav class="navbar">
+    <div class="dropdown">
+        <button class="dropdown-button" onclick="toggleDropdown()">☰</button>
+        <div id="dropdown-menu" class="dropdown-content">
+            <a href="clothing.html">Clothing & Accessories</a>
+            <a href="nursery.html">Nursery & Furniture</a>
+            <a href="feeding.html">Feeding & Nursing</a>
+            <a href="toys.html">Toys & Learning</a>
+        </div>
+    </div>
+    <a href="contact.html" class="contact-link">Contact Us</a>
+    <a href="signin.html" class="sign-in-button">Sign In</a>
+    <a href="cart.html" class="cart-button">🛒 Cart <span id="cart-count">(0)</span></a>
+</nav>
+<section>
+    <div class="cart-container">
+        <h1 class="cart-header">Your Cart</h1>
+        <ul class="cart-items" id="cart-items"></ul>
+        <div class="cart-total" id="cart-total">Total: $0.00</div>
+        <a href="#" class="checkout-button">Proceed to Checkout</a>
+    </div>
+</section>
+<script>
+    function getCart() {
+        return JSON.parse(localStorage.getItem('cart')) || [];
+    }
+
+    function updateCart() {
+        const cart = getCart();
+        const cartItems = document.getElementById('cart-items');
+        const cartCount = document.getElementById('cart-count');
+        const cartTotal = document.getElementById('cart-total');
+        
+        let total = 0;
+        cartItems.innerHTML = '';
+        
+        cart.forEach(item => {
+            const cartItem = document.createElement('li');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <div class="cart-item-details">
+                    <div class="cart-item-name">${item.name}</div>
+                    <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                </div>
+            `;
+            cartItems.appendChild(cartItem);
+            total += item.price;
+        });
+        
+        cartCount.textContent = `(${cart.length})`;
+        cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    updateCart();
+</script>
+</body>
+</html>

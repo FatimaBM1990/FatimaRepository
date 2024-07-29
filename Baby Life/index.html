@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Life Simulator</h1>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <div id="character-section">
+            <img src="https://www.iconsdb.com/icons/preview/black/baby-xxl.png">
+        </div>
+        <div id="stats">
+            <p>Age: <span id="age">0</span> years</p>
+            <p>Money: $<span id="money">1000</span></p>
+            <p>Happiness: <span id="happiness">50</span>/100</p>
+            <p>BMI: <span id="bmi">25</span></p>
+            <p>IQ: <span id="iq">100</span></p>
+        </div>
+        <div id="actions">
+            <button id="age-button" onclick="ageUp()">Age Up</button>
+            <button onclick="goShopping()">Go Shopping</button>
+            <button onclick="exercise()">Exercise</button>
+            <button onclick="readBooks()">Read Books</button>
+            <button onclick="investInEducation()">Invest in Education</button>
+            <button id="gamble-button" style="display:none;" onclick="gamble()">Gamble</button>
+            <button id="university-button" style="display:none;" onclick="chooseUniversity()">University</button>
+        </div>
+    </div>
+    <div id="shopping-container" style="display: none;">
+        <h2>Select a Shop</h2>
+        <button onclick="enterShop('Dior')">Dior</button>
+        <button onclick="enterShop('McDonalds')">McDonald's</button>
+        <button onclick="enterShop('Primark')">Primark</button>
+        <button onclick="enterShop('HM')">H&M</button>
+       
+    </div>
+    <div id="confetti" style="display:none;">🎉</div>
+    <script src="script.js"></script>
+</body>
+</html>
